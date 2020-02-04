@@ -1,5 +1,5 @@
 import React from 'react';
-import {Layout, Menu, Breadcrumb, Icon, Calendar, Badge} from 'antd';
+import {Layout, Menu, Breadcrumb, Icon, Calendar, Badge, Avatar, Row, Col} from 'antd';
 
 const {Header, Content, Footer, Sider} = Layout;
 const {SubMenu} = Menu;
@@ -120,7 +120,12 @@ class AppLayout extends React.Component {
           </Menu>
         </Sider>
         <Layout>
-          <Header style={{background: '#fff', padding: 0}}/>
+          <Header style={{background: '#fff', padding: 0}}>
+            <Row type="flex" justify="end">
+              <Col span={4}><Avatar icon="user" /></Col>
+            </Row>
+          </Header>
+
           <Content style={{margin: '0 16px'}}>
             <Breadcrumb style={{margin: '16px 0'}}>
               <Breadcrumb.Item>User</Breadcrumb.Item>
